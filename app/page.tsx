@@ -1,65 +1,147 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+      {/* Hero Section with Image */}
+      <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80')",
+          }}
+        >
+          {/* Darker overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container relative z-10 mx-auto px-6 text-center text-white">
+          <h1 className="mb-4 text-6xl font-bold tracking-tight drop-shadow-lg md:text-8xl">
+            Le Barbylone
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+          <p className="mb-8 text-2xl font-light drop-shadow-md md:text-3xl">
+            Bar & Tapas
+          </p>
+          <p className="mx-auto max-w-2xl text-xl leading-relaxed drop-shadow-md">
+            Découvrez l'art de vivre méditerranéen dans notre établissement chaleureux.
+            Des tapas authentiques, une sélection de vins raffinés et une atmosphère conviviale vous attendent au cœur de Perpignan.
+          </p>
+          <div className="mt-8">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="/carte"
+              className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-amber-900 transition-all hover:bg-gray-100 hover:scale-105"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Voir la carte
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-gradient-to-br from-red-800 via-red-900 to-rose-950 py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="mb-8 text-center text-4xl font-bold text-amber-100">
+            Bienvenue
+          </h2>
+          <p className="text-center text-lg leading-relaxed text-amber-50">
+            Le Barbylone est votre destination pour passer un moment agréable entre amis ou en famille.
+            Notre objectif est de créer une ambiance chaleureuse où tout le monde se sent chez soi.
+            Que vous veniez pour un apéro entre collègues ou un dîner en famille,
+            nous vous accueillons dans un cadre élégant et décontracté.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* Hours & Contact Grid */}
+      <section className="bg-white py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* Opening Hours */}
+            <div className="rounded-lg bg-amber-50 p-8 shadow-lg">
+              <h2 className="mb-6 text-3xl font-bold text-amber-900">
+                Horaires d'ouverture
+              </h2>
+              <div className="space-y-3 text-gray-700">
+                <div className="flex justify-between border-b border-amber-200 pb-2">
+                  <span className="font-semibold">Lundi</span>
+                  <span>18h00 - 00h00</span>
+                </div>
+                <div className="flex justify-between border-b border-amber-200 pb-2">
+                  <span className="font-semibold">Mardi - Samedi</span>
+                  <span>06h00 - 00h00</span>
+                </div>
+                <div className="flex justify-between pb-2">
+                  <span className="font-semibold">Dimanche</span>
+                  <span className="text-red-600">Fermé</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact & Location */}
+            <div className="rounded-lg bg-orange-50 p-8 shadow-lg">
+              <h2 className="mb-6 text-3xl font-bold text-orange-900">
+                Contact
+              </h2>
+              <div className="space-y-4 text-gray-700">
+                <div>
+                  <h3 className="mb-2 font-semibold text-orange-800">Adresse</h3>
+                  <p>Rue de Napoléon</p>
+                  <p>66000 Perpignan</p>
+                </div>
+                <div>
+                  <h3 className="mb-2 font-semibold text-orange-800">Téléphone</h3>
+                  <a href="tel:0000000000" className="hover:text-orange-700 transition-colors">
+                    00 00 00 00 00
+                  </a>
+                </div>
+                <div>
+                  <h3 className="mb-2 font-semibold text-orange-800">Email</h3>
+                  <a href="mailto:Lebarbylone@test.fr" className="hover:text-orange-700 transition-colors">
+                    Lebarbylone@test.fr
+                  </a>
+                </div>
+                <div>
+                  <h3 className="mb-2 font-semibold text-orange-800">Instagram</h3>
+                  <a
+                    href="https://instagram.com/Lebarbylone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-700 transition-colors"
+                  >
+                    @Lebarbylone
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-red-800 via-red-900 to-rose-950 py-16 px-6 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-4xl font-bold">
+            Venez nous rendre visite !
+          </h2>
+          <p className="mb-8 text-xl">
+            Une ambiance chaleureuse vous attend au Barbylone
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:0000000000"
+            className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-amber-900 transition-all hover:bg-amber-50 hover:scale-105"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Appelez-nous
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-rose-950 py-8 text-center text-amber-100">
+        <p>Le Barbylone - Bar & Tapas à Perpignan</p>
+        <p className="mt-2 text-sm text-amber-300">
+          Rue de Napoléon, 66000 Perpignan | 00 00 00 00 00
+        </p>
+      </footer>
     </div>
   );
 }
