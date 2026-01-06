@@ -1,4 +1,7 @@
 // Le Barbylone - Site officiel
+import CocktailCarousel from './components/CocktailCarousel';
+import ReviewsSection from './components/ReviewsSection';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
@@ -30,7 +33,7 @@ export default function Home() {
           <div className="mt-8">
             <a
               href="/carte"
-              className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-amber-900 transition-all hover:bg-gray-100 hover:scale-105"
+              className="inline-block rounded-full bg-amber-500 px-8 py-4 text-lg font-semibold text-gray-900 transition-all hover:bg-amber-400 hover:scale-105"
             >
               Voir la carte
             </a>
@@ -39,19 +42,32 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-gradient-to-br from-red-800 via-red-900 to-rose-950 py-16 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="mb-8 text-center text-4xl font-bold text-amber-100">
+      <section className="bg-gradient-to-br from-gray-900 via-neutral-900 to-stone-900 py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-12 text-center text-5xl font-bold text-amber-400 drop-shadow-lg">
             Bienvenue
           </h2>
-          <p className="text-center text-lg leading-relaxed text-amber-50">
-            Le Barbylone est votre destination pour passer un moment agréable entre amis ou en famille.
-            Notre objectif est de créer une ambiance chaleureuse où tout le monde se sent chez soi.
-            Que vous veniez pour un apéro entre collègues ou un dîner en famille,
-            nous vous accueillons dans un cadre élégant et décontracté.
-          </p>
+          <div className="space-y-6 text-center">
+            <p className="text-xl font-light leading-relaxed text-amber-100 drop-shadow-md">
+              Le Barbylone, c'est le nouveau repaire incontournable de Perpignan où l'ambiance chaleureuse rencontre les saveurs authentiques.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-200">
+              Notre bar vous invite à vivre un moment de convivialité autour d'une carte de tapas généreuses et savoureuses,
+              parfaites pour partager entre amis ou en famille. Que vous veniez pour un apéro improvisé, une soirée détendue
+              ou simplement pour découvrir de nouvelles saveurs, le Barbylone vous accueille dans une atmosphère décontractée et conviviale.
+            </p>
+            <p className="text-xl font-semibold leading-relaxed text-amber-300 drop-shadow-lg">
+              Le Barbylone, c'est plus qu'un bar – c'est votre nouveau rendez-vous pour des moments inoubliables à Perpignan !
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* Cocktail Carousel */}
+      <CocktailCarousel />
+
+      {/* Reviews Section */}
+      <ReviewsSection />
 
       {/* Hours & Contact Grid */}
       <section className="bg-white py-16 px-6">
@@ -119,17 +135,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-red-800 via-red-900 to-rose-950 py-16 px-6 text-white">
+      <section className="bg-gradient-to-br from-gray-900 via-neutral-900 to-stone-900 py-16 px-6 text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-4xl font-bold">
+          <h2 className="mb-6 text-4xl font-bold text-amber-400">
             Venez nous rendre visite !
           </h2>
-          <p className="mb-8 text-xl">
+          <p className="mb-8 text-xl text-gray-200">
             Une ambiance chaleureuse vous attend au Barbylone
           </p>
           <a
             href="tel:0000000000"
-            className="inline-block rounded-full bg-white px-8 py-4 text-lg font-semibold text-amber-900 transition-all hover:bg-amber-50 hover:scale-105"
+            className="inline-block rounded-full bg-amber-500 px-8 py-4 text-lg font-semibold text-gray-900 transition-all hover:bg-amber-400 hover:scale-105"
           >
             Appelez-nous
           </a>
@@ -137,9 +153,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-rose-950 py-8 text-center text-amber-100">
+      <footer className="bg-black py-8 text-center text-amber-400">
         <p>Le Barbylone - Bar & Tapas à Perpignan</p>
-        <p className="mt-2 text-sm text-amber-300">
+        <p className="mt-2 text-sm text-amber-500">
           Rue de Napoléon, 66000 Perpignan | 00 00 00 00 00
         </p>
       </footer>

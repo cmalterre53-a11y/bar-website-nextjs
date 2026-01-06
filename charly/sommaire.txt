@@ -1,0 +1,25 @@
+═══════════════════════════════════════════════
+    ARBORESCENCE DU DOSSIER CHARLY
+═══════════════════════════════════════════════
+
+charly/
+│
+├── sommaire.txt .................... Ce fichier : description de l'organisation
+│
+├── profile/ ........................ Dossier contenant mes informations personnelles
+│   └── informations.txt ............ Nom, prénom, date de naissance, âge, taille
+│
+├── famille/ ........................ Dossier contenant les informations familiales
+│   └── prenoms.txt ................. Liste des prénoms des membres de ma famille
+│
+└── métier/ ......................... Dossier contenant mes informations professionnelles
+    ├── description.txt ............. Description de mon métier de grossiste
+    └── [photo.jpg] ................. Photo en lien avec mon travail (à ajouter)
+
+
+═══════════════════════════════════════════════
+RÉSUMÉ :
+- 3 dossiers principaux : profile, famille, métier
+- 4 fichiers texte : informations, prénoms, description, sommaire
+- 1 photo à ajouter dans le dossier métier
+═══════════════════════════════════════════════
