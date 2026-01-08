@@ -32,7 +32,7 @@ export default function CocktailCarousel() {
     <section className="bg-gradient-to-br from-gray-900 via-neutral-900 to-stone-900 py-16">
       <div className="container mx-auto px-6">
         <h2 className="mb-10 text-center text-5xl font-bold text-amber-400">
-          Nos Cocktails
+          Cocktails
         </h2>
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl bg-black/30 p-8 shadow-2xl backdrop-blur-sm">
           <div className="flex h-[400px] transition-transform duration-700 ease-in-out"
