@@ -23,11 +23,11 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="container relative z-10 mx-auto px-6 text-center text-white">
-          <h1 className="mb-4 text-6xl font-bold tracking-tight drop-shadow-lg md:text-8xl">
+        <div className="container relative z-10 mx-auto px-6 text-center text-white mt-20">
+          <h1 className="mb-4 text-5xl font-bold tracking-tight drop-shadow-lg md:text-6xl">
             Le Barbylone
           </h1>
-          <p className="mb-8 text-2xl font-light drop-shadow-md md:text-3xl">
+          <p className="mb-8 text-xl font-light drop-shadow-md md:text-2xl">
             Bar & Tapas
           </p>
           <div className="mt-8">

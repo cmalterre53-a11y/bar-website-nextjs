@@ -44,18 +44,18 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           {/* Logo avec effet */}
           <Link
             href="/"
-            className="group flex items-center gap-2 text-2xl font-bold text-amber-400 hover:text-amber-300 transition-all duration-300"
+            className="group flex items-center gap-2 text-xl font-bold text-amber-400 hover:text-amber-300 transition-all duration-300"
           >
             <span className="relative">
               Le Barbylone
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </span>
             <svg
-              className="h-6 w-6 text-amber-400 group-hover:rotate-12 transition-transform duration-300"
+              className="h-5 w-5 text-amber-400 group-hover:rotate-12 transition-transform duration-300"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -67,28 +67,28 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <button
               onClick={() => scrollToSection('accueil')}
-              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-lg group"
+              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
             >
               Accueil
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <Link
               href="/carte"
-              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-lg group"
+              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
             >
               Carte
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <button
               onClick={() => scrollToSection('avis')}
-              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-lg group"
+              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
             >
               Avis
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="relative rounded-full bg-white px-8 py-3 text-amber-900 font-bold text-lg transition-all duration-300 hover:bg-amber-50 hover:scale-110 hover:shadow-2xl border-2 border-white transform"
+              className="relative rounded-full bg-white px-6 py-2 text-amber-900 font-bold text-base transition-all duration-300 hover:bg-amber-50 hover:scale-110 hover:shadow-2xl border-2 border-white transform"
             >
               <span className="flex items-center gap-2">
                 Contact
