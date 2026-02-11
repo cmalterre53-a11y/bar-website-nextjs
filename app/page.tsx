@@ -67,60 +67,59 @@ export default function Home() {
       <ReviewsSection />
 
       {/* Hours & Contact Grid */}
-      <section className="bg-gradient-to-b from-amber-100 via-orange-100 to-amber-50 py-16 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 md:grid-cols-2">
+      <section className="bg-amber-50 py-16 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid gap-10 md:grid-cols-2">
             {/* Opening Hours */}
-            <div className="rounded-lg bg-white p-8 shadow-2xl">
-              <h2 className="mb-6 text-3xl font-bold text-amber-900">
+            <div>
+              <h2 className="mb-6 text-2xl font-semibold text-amber-900">
                 Horaires d'ouverture
               </h2>
               <div className="space-y-3 text-gray-700">
                 <div className="flex justify-between border-b border-amber-200 pb-2">
-                  <span className="font-semibold">Lundi</span>
+                  <span className="font-medium">Lundi</span>
                   <span>18h00 - 00h00</span>
                 </div>
                 <div className="flex justify-between border-b border-amber-200 pb-2">
-                  <span className="font-semibold">Mardi - Samedi</span>
+                  <span className="font-medium">Mardi - Samedi</span>
                   <span>06h00 - 00h00</span>
                 </div>
                 <div className="flex justify-between pb-2">
-                  <span className="font-semibold">Dimanche</span>
+                  <span className="font-medium">Dimanche</span>
                   <span className="text-red-600">Fermé</span>
                 </div>
               </div>
             </div>
 
             {/* Contact & Location */}
-            <div className="rounded-lg bg-white p-8 shadow-2xl">
-              <h2 className="mb-6 text-3xl font-bold text-amber-900">
+            <div>
+              <h2 className="mb-6 text-2xl font-semibold text-amber-900">
                 Contact
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-3 text-gray-700 text-sm">
                 <div>
-                  <h3 className="mb-2 font-semibold text-amber-800">Adresse</h3>
-                  <p>Rue de Napoléon</p>
-                  <p>66000 Perpignan</p>
+                  <h3 className="font-medium text-amber-800">Adresse</h3>
+                  <p>Rue de Napoléon, 66000 Perpignan</p>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-amber-800">Téléphone</h3>
-                  <a href="tel:0000000000" className="hover:text-amber-700 transition-colors">
+                  <h3 className="font-medium text-amber-800">Téléphone</h3>
+                  <a href="tel:0000000000" className="text-amber-700 hover:text-amber-600 hover:underline">
                     00 00 00 00 00
                   </a>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-amber-800">Email</h3>
-                  <a href="mailto:Lebarbylone@test.fr" className="hover:text-amber-700 transition-colors">
+                  <h3 className="font-medium text-amber-800">Email</h3>
+                  <a href="mailto:Lebarbylone@test.fr" className="text-amber-700 hover:text-amber-600 hover:underline">
                     Lebarbylone@test.fr
                   </a>
                 </div>
                 <div>
-                  <h3 className="mb-2 font-semibold text-amber-800">Instagram</h3>
+                  <h3 className="font-medium text-amber-800">Instagram</h3>
                   <a
                     href="https://instagram.com/Lebarbylone"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-700 transition-colors"
+                    className="text-amber-700 hover:text-amber-600 hover:underline"
                   >
                     @Lebarbylone
                   </a>
@@ -132,17 +131,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-black py-16 px-6 text-white">
+      <section className="bg-amber-50 py-16 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-4xl font-bold text-amber-400">
+          <h2 className="mb-6 text-4xl font-bold text-amber-900">
             Venez nous rendre visite !
           </h2>
-          <p className="mb-8 text-xl text-gray-200">
+          <p className="mb-8 text-xl text-gray-700">
             Une ambiance chaleureuse vous attend au Barbylone
           </p>
           <a
             href="tel:0000000000"
-            className="inline-block rounded-full bg-white px-8 py-4 text-lg font-bold text-amber-900 transition-all hover:bg-amber-50 hover:scale-110 shadow-xl border-2 border-white"
+            className="inline-block rounded-full bg-amber-900 px-8 py-4 text-lg font-bold text-amber-50 transition-all hover:bg-amber-800 hover:scale-105 shadow-lg"
           >
             Appelez-nous
           </a>
