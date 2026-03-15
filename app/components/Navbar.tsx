@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +74,13 @@ export default function Navbar() {
               Carte
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
+            <Link
+              href="/reservation"
+              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
+            >
+              Réservation
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
             <button
               onClick={() => scrollToSection('avis')}
               className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
@@ -79,6 +88,13 @@ export default function Navbar() {
               Avis
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
             </button>
+            <Link
+              href={user ? '/compte' : '/connexion'}
+              className="relative text-white hover:text-amber-400 transition-all duration-300 font-semibold text-base group"
+            >
+              {user ? 'Mon compte' : 'Se connecter'}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
             <button
               onClick={() => scrollToSection('contact')}
               className="relative rounded-full bg-white px-6 py-2 text-amber-900 font-bold text-base transition-all duration-300 hover:bg-amber-50 hover:scale-110 hover:shadow-2xl border-2 border-white transform"
